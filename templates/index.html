@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>URL Shortener</title>
+
+    <link
+        rel="stylesheet"
+        href="{{ url_for('static', filename='app.css') }}"
+    >
+
+</head>
+
+<body>
+
+    <div class="center">
+
+        <h1 id="ha">URL Shortener</h1>
+
+
+        <div class="input-container">
+
+            <input
+                id="inputurl"
+                type="text"
+                placeholder="Enter URL"
+                autocomplete="off"
+            >
+
+            <div class="input-buttons">
+
+                <button
+                    id="pasteButton"
+                    type="button"
+                    title="Paste URL"
+                >
+                    Paste
+                </button>
+
+                <button
+                    id="clearButton"
+                    type="button"
+                    title="Clear URL"
+                >
+                    ×
+                </button>
+
+            </div>
+
+        </div>
+
+
+        <button
+            id="subbutton"
+            type="button"
+        >
+            Shorten URL
+        </button>
+
+
+        <p id="error"></p>
+
+
+        <div id="resultBox">
+
+            <a
+                id="shortLink"
+                href="#"
+                target="_blank"
+            ></a>
+
+            <button
+                id="copyButton"
+                type="button"
+            >
+                Copy
+            </button>
+
+        </div>
+
+    </div>
+
+
+    <script
+        src="{{ url_for('static', filename='app.js') }}"
+    ></script>
+
+</body>
+
+</html>
